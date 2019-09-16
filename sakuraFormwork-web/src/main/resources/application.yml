@@ -1,0 +1,54 @@
+#server
+server:
+  port: 8095
+  servlet:
+    context-path: /
+  tomcat:
+    max-threads: 1000
+
+
+
+#spring
+spring:
+  datasource:
+    #引入druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///sakuraformwork??serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+    username: root
+    password: 888666
+  thymeleaf:
+    prefix: classpath:/templates/pages/
+    suffix: .html
+
+
+#mybatis
+mybatis:
+  configuration:
+    default-statement-timeout: 30
+    map-underscore-to-camel-case: true
+  mapper-locations:
+  - classpath:/mapper/sys/*.xml
+
+  #mybatis-plush配置
+  mybatis-plus:
+    #别名包  简化类型转化的写法
+    type-aliases-package: org.sakura.pojo
+    #加载mybatis的映射文件
+    mapper-locations: classpath:/mybatis/mappers/*.xml
+    #开启驼峰映射
+    configuration:
+      map-underscore-to-camel-case: false
+
+#lOG
+logging:
+  level:
+    com.cy: DEBUG
+    
+      
+
+    
+    
+    
+    
+    

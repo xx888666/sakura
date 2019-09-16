@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://www.starbucks.com.cn/menu/ -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" async=""
+            src="index_files/analytics.js.下载"></script>
+    <script src="index_files/hm.js.下载"></script>
+    <script async="" src="index_files/gtm.js.下载"></script>
+    <script>
+        window.dataLayer = [];
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l='
+                + l
+                : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MGKBKT5');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement('script');
+            hm.src = 'https://hm.baidu.com/hm.js?8dfa8fb7ffbd0407c8562282198066a6';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+    <title>季度精选 - 饮品、食物、咖啡豆、杯子、星享卡和礼物 | 星巴克</title>
+
+    <!-- Meta -->
+
+
+    <meta http-equiv="Content-Language" content="zh">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="发现星巴克限时饮品、当季食物、咖啡豆、杯子、星享卡和星礼卡。">
+    <meta name="baidu-site-verification" content="u7Vir8pZFL">
+    <link rel="canonical" href="https://www.starbucks.com.cn/menu/">
+
+    <!-- Open graph -->
+    <meta property="og:site_name" content="星巴克">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="季度精选 - 饮品、食物、咖啡豆、杯子、星享卡和礼物">
+    <meta property="og:url" content="/menu/">
+    <meta property="og:description" content="发现星巴克限时饮品、当季食物、咖啡豆、杯子、星享卡和星礼卡。">
+    <meta property="og:image" content="/assets/favicons/mstile-310x150.png">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site"
+          content="{&quot;username&quot;=&gt;&quot;@starbucks&quot;}">
+    <meta name="twitter:title" content="季度精选 - 饮品、食物、咖啡豆、杯子、星享卡和礼物">
+    <meta name="twitter:description"
+          content="发现星巴克限时饮品、当季食物、咖啡豆、杯子、星享卡和星礼卡。">
+    <meta name="twitter:image" content="/assets/favicons/mstile-310x150.png">
+
+    <!-- WeChat sharing -->
+    <script>
+        var WECHAT_TITLE = '星巴克官网: 季度精选 - 饮品、食物、咖啡豆、杯子、星享卡和礼物';
+        var WECHAT_DESC = '发现星巴克限时饮品、当季食物、咖啡豆、杯子、星享卡和星礼卡。';
+        var WECHAT_IMAGE = '/assets/images/wechat.png';
+        var WCHAT_NO_GA = '';
+    </script>
+
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="https://www.starbucks.com.cn/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png"
+          href="https://www.starbucks.com.cn/assets/favicons/favicon-32x32.png"
+          sizes="32x32">
+    <link rel="icon" type="image/png"
+          href="https://www.starbucks.com.cn/assets/favicons/favicon-16x16.png"
+          sizes="16x16">
+    <link rel="manifest"
+          href="https://www.starbucks.com.cn/assets/favicons/manifest.json">
+    <link rel="mask-icon"
+          href="https://www.starbucks.com.cn/assets/favicons/safari-pinned-tab.svg"
+          color="#ef233c">
+    <link rel="shortcut icon"
+          href="https://www.starbucks.com.cn/assets/favicons/favicon.ico">
+    <meta name="msapplication-config"
+          content="/assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./index_files/styles.css">
+
+
+    <!--自己写的js-->
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            alert("文档加载完毕!");
+            var html = "<h1>测试按钮</h1>";
+
+            function testMenu() {
+                $(".display-2").append(html);
+            }
+
+
+            findMenu();
+            function findMenu() {
+
+                $.ajax({
+                    url: "newMenu/findAllMenu",//请求的url地址
+                    dataType: "json",//返回的格式为json
+                    async: true,//请求是否异步，默认true异步，这是ajax的特性
+                    //data: {"id": "value"},//参数值
+                    type: "post",//请求的方式
+
+                    success: function (data) {
+                        console.log(data);
+
+                        for (i = 0; i < data.data.length; i++) {
+
+                            var a = "<a>"+data.data[i].menuName+"</a>"
+                            $(".display-2").append(a);
+                        }
+
+
+                    }//请求成功的处理
+
+                });
+
+            }
+
+        });
+        function testMenu() {
+            var html = "<h1>测试按钮</h1>";
+            $(".display-2").append(html);
+
+        }
+
+        //查找数据库中用户添加的菜单, 有的话遍历数据库中的数据, 并添加到页面
+
+
+
+        //保存用户在MenuList中上传的图片和文字
+        $.post("/item/save", $("#itemAddForm").serialize(), function(data){
+            if(data.status == 1){
+                $.messager.alert('提示','新增商品成功!');
+            }else{
+                $.messager.alert("提示","新增商品失败!");
+            }
+        });
+
+
+
+    </script>
+</head>
+
+<body class="lang-zh page-menu chrome non-logged-in" ontouchstart="">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src='https://www.googletagmanager.com/ns.html?id=GTM-MGKBKT5'
+            height='0' width='0' style='display: none; visibility: hidden'></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script>
+    var isChrome = ((navigator.userAgent.toLowerCase().indexOf('chrome') > -1)
+        && (navigator.vendor.toLowerCase().indexOf('google') > -1) || navigator.userAgent
+            .match('CriOS'));
+    if (isChrome)
+        document.body.classList.add('chrome');
+</script>
+
+
+<div id="app-view-wrapper">
+    <!-- Navigation panel -->
+
+
+    <nav id="nav">
+        <div class="container">
+            <header class="header">
+                <a class="logo" href="https://www.starbucks.com.cn/"> <img
+                        src="./index_files/logo.svg" alt="星巴克">
+                </a>
+                <div class="primary">
+                    <ul>
+
+                        <li class="stores"><a id="stores-primary"
+                                              href="https://www.starbucks.com.cn/stores/"> 门店 </a></li>
+
+                        <li class="account"><a id="account-primary"
+                                               href="https://www.starbucks.com.cn/account/"><span
+                                data-reactroot="" class="">我的帐户</span></a></li>
+
+                        <li class="menu"><a id="menu-primary"
+                                            href="https://www.starbucks.com.cn/menu/" class="active"> 菜单
+                        </a></li>
+
+                    </ul>
+                </div>
+
+                <a class="icon trigger" rel="nav-overlay" id="nav-menu"> <img
+                        src="./index_files/icon-hamburger.svg"> <span>更多</span>
+                </a>
+
+            </header>
+
+            <div class="body">
+                <nav class="container middle secondary">
+
+
+                    <div class="display-1">菜单</div>
+
+                    <div class="display-2">
+                        <button onclick="findMenu()">添加菜单</button>
+                    </div>
+
+
+                    <div class="tabs-wrapper">
+                        <ul class="subcategories">
+
+                            <li><a id="side_menu_default"
+                                   href="https://www.starbucks.com.cn/menu/" class="active">
+                                季度精选 </a></li>
+
+                            <li><a id="side_menu_beverages"
+                                   href="https://www.starbucks.com.cn/menu/beverages/"> 饮料 </a></li>
+
+                            <li><a id="side_menu_food"
+                                   href="https://www.starbucks.com.cn/menu/food/"> 美食 </a></li>
+
+                            <li><a id="side_menu_coffee"
+                                   href="https://www.starbucks.com.cn/menu/coffee/"> 咖啡产品 </a></li>
+
+                            <li><a id="side_menu_merchandise"
+                                   href="https://www.starbucks.com.cn/menu/merchandise/"> 商品 </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </nav>
+
+            </div>
+        </div>
+
+
+        <div class="overlay " id="nav-overlay">
+            <div class="container">
+                <header class="header">
+                    <a class="logo" href="https://www.starbucks.com.cn/"> <img
+                            src="./index_files/logo.svg" alt="星巴克">
+                    </a>
+                    <button class="icon close">Close</button>
+                </header>
+                <section class="body">
+                    <div class="container middle">
+                        <ul>
+
+                            <li><a id="stores-overlay"
+                                   href="https://www.starbucks.com.cn/stores/"> 门店 </a></li>
+
+
+                            <li><a id="account-overlay"
+                                   href="https://www.starbucks.com.cn/account/starbucks-rewards/"><span
+                                    data-reactroot="" class="">星享俱乐部</span></a></li>
+
+
+                            <li><a id="menu-overlay"
+                                   href="https://www.starbucks.com.cn/menu/" class="active">
+                                菜单 </a></li>
+                            <li>
+                                <hr>
+                            </li>
+
+                            <li><a id="apps-overlay"
+                                   href="https://www.starbucks.com.cn/apps/"> 星巴克移动应用 </a></li>
+
+
+                            <li><a id="svc-overlay"
+                                   href="https://www.starbucks.com.cn/starbucks-gift-card/">
+                                星礼卡 </a></li>
+
+
+                            <li><a id="starbucks_reserve-overlay"
+                                   href="https://www.starbucks.com.cn/starbucks-reserve/">
+                                星巴克臻选™ </a></li>
+
+
+                            <li><a id="starbucks_mop-overlay"
+                                   href="https://www.starbucks.com.cn/starbucks-now/"> 啡快™ －
+                                在线点 到店取 </a></li>
+
+
+                            <li><a id="starbucks_delivery-overlay"
+                                   href="https://www.starbucks.com.cn/starbucks-delivers-info/">
+                                专星送™ </a></li>
+
+
+                            <li><a id="coffeehouse-overlay"
+                                   href="https://www.starbucks.com.cn/coffee-blog" target="_blank">
+                                咖啡星讲堂 </a></li>
+
+
+                            <li><a id="roastery-overlay"
+                                   href="https://roastery.starbucks.com.cn/" target="_blank">
+                                上海烘焙工坊 </a></li>
+
+
+                            <li><a id="about-overlay"
+                                   href="https://www.starbucks.com.cn/about/"> 关于星巴克 </a></li>
+
+
+                            <li><a id="help-overlay"
+                                   href="https://www.starbucks.com.cn/help/"> 帮助中心 </a></li>
+
+
+                            <li>
+                                <hr>
+                            </li>
+                        </ul>
+                        <footer class="account">
+                            <div id="account-logout">
+									<span data-reactroot=""><a id="menu-login"
+                                                               class="sign-in"
+                                                               href="https://www.starbucks.com.cn/account/"><img
+                                            src="./index_files/icon-account.svg"><span><span>登录</span></span></a><a
+                                            id="menu-join" class="button small register"
+                                            href="https://www.starbucks.com.cn/account/register/"><span><span>注册</span></span></a></span>
+                            </div>
+                        </footer>
+                    </div>
+                </section>
+                <footer class="footer">
+                    <div class="container">
+
+
+                        <a id="en-collapse" class="lang"
+                           href="javascript:void(window.location.pathname = &quot;/en/menu/&quot;)">
+                            English </a> | <a id="privacy-collapse"
+                                              href="https://www.starbucks.com.cn/help/legal/privacy-policy">
+                        隐私政策 </a> | <a id="terms-collapse"
+                                       href="https://www.starbucks.com.cn/help/legal/terms-of-starbucks-website/">
+                        使用条款 </a>
+                        <div class="legal">
+                            <div class="license">
+									<span> <a
+                                            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402000318"
+                                            target="_blank"> <img width="10" height="10"
+                                                                  src="./index_files/icpicon.png">&nbsp;沪公网安备
+											31010402000318号
+									</a>
+									</span> | <a href="http://www.miibeian.gov.cn/" target="_blank">沪ICP备17003747号</a>
+                            </div>
+                            <!-- <div class='copyright'>© 2017 Starbucks Corporation.</div> -->
+
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+    </nav>
+
+
+    <!-- Page content -->
+    <section id="content">
+
+
+        <section class="hero relative">
+            <a href="#">上传图片</a>
+            <button>上传图片</button>
+
+            <div class="block relative mobile-hidden">
+                <a href="https://www.starbucks.com.cn/menu/#lto-items"> <img
+                        src="./index_files/banner-1.jpg" class="img">
+                </a>
+            </div>
+            <div class="block relative show-mobile tablet-hidden">
+                <a href="https://www.starbucks.com.cn/menu/#lto-items"> <img
+                        src="./index_files/banner-1-mobile.jpg" class="img">
+                </a>
+            </div>
+
+            <div class="wrapper">
+                <h2>遇见秋日灵感</h2>
+                <p class="text description" style="padding: 0 20px">
+                    秋风渐起，落叶满地，你开始期待繁琐的日常中出现一些惊喜。于是，我们带来了万众星粉期待的南瓜丝绒拿铁，以及星级咖啡师秋日新作枫糖可芮奇诺。这个秋日，用全新的灵感，与你一起遇见别样的咖啡体验。
+                </p>
+            </div>
+        </section>
+        <section class="featured-items">
+            <div class="item">
+                <div class="mobile-hidden">
+                    <a href="https://www.starbucks.com.cn/menu/#lto-items"
+                       class="block relative"> <img src="./index_files/banner-2.jpg"
+                                                    class="img">
+                    </a>
+                    <div class="description text wrapper">
+                        <h2>唤醒新一天</h2>
+                        <p>有趣创意的DIY早餐，香酥吐司、浓郁抹酱、趣味调料的随心搭配，用每天不重样的选择唤醒繁忙的早晨，扫走初秋的倦意。</p>
+                    </div>
+                </div>
+                <div class="show-mobile tablet-hidden">
+                    <a href="https://www.starbucks.com.cn/menu/#lto-items"
+                       class="block relative"> <img
+                            src="./index_files/banner-2-mobile.jpg" class="img">
+                    </a>
+                    <div class="description text wrapper collapsed">
+                        <h2>唤醒新一天</h2>
+                        <div class="body">
+                            <p>有趣创意的DIY早餐，香酥吐司、浓郁抹酱、趣味调料的随心搭配，用每天不重样的选择唤醒繁忙的早晨，扫走初秋的倦意。</p>
+                        </div>
+                        <span class="icon"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="mobile-hidden">
+                    <a href="https://www.starbucks.com.cn/menu/#lto-items"
+                       class="block relative"> <img src="./index_files/banner-3.jpg"
+                                                    class="img">
+                    </a>
+                    <div class="description text wrapper">
+                        <h2>秋日下午茶，陪伴咖啡好时光</h2>
+                        <p>初秋的下午茶新推荐，让外型萌趣的全新蛋糕，为枯燥的生活增添一份乐趣，给秋日慵懒的午后带来甜甜的幸福感。</p>
+                    </div>
+                </div>
+                <div class="show-mobile tablet-hidden">
+                    <a href="https://www.starbucks.com.cn/menu/#lto-items"
+                       class="block relative"> <img
+                            src="./index_files/banner-3-mobile.jpg" class="img">
+                    </a>
+                    <div class="description text wrapper collapsed">
+                        <h2>秋日下午茶，陪伴咖啡好时光</h2>
+                        <div class="body">
+                            <p>初秋的下午茶新推荐，让外型萌趣的全新蛋糕，为枯燥的生活增添一份乐趣，给秋日慵懒的午后带来甜甜的幸福感。</p>
+                        </div>
+                        <span class="icon"></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="mobile-hidden">
+                    <a href="https://www.starbucks.com.cn/menu/#lto-items"
+                       class="block relative"> <img src="./index_files/banner-4.jpg"
+                                                    class="img">
+                    </a>
+                    <div class="description text wrapper">
+                        <h2>童话与梦幻的珍藏</h2>
+                        <p>
+                            几米绘本《月亮忘记了》联名会员星礼包，几米老师温暖而细腻的画风温暖无数人的内心，如秋季一杯咖啡添来的一份暖意。20周年纪念版人鱼系列星礼包最终款——流连辗转会员星礼包，四季人鱼与大海的故事璀璨而温暖。</p>
+                    </div>
+                </div>
+                <div class="show-mobile tablet-hidden">
+                    <a href="https://www.starbucks.com.cn/menu/#lto-items"
+                       class="block relative"> <img
+                            src="./index_files/banner-4-mobile.jpg" class="img">
+                    </a>
+                    <div class="description text wrapper collapsed">
+                        <h2>童话与梦幻的珍藏</h2>
+                        <div class="body">
+                            <p>
+                                几米绘本《月亮忘记了》联名会员星礼包，几米老师温暖而细腻的画风温暖无数人的内心，如秋季一杯咖啡添来的一份暖意。20周年纪念版人鱼系列星礼包最终款——流连辗转会员星礼包，四季人鱼与大海的故事璀璨而温暖。</p>
+                        </div>
+                        <span class="icon"></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="mobile-hidden">
+                    <a href="https://www.starbucks.com.cn/menu/#lto-items"
+                       class="block relative"> <img src="./index_files/banner-5.jpg"
+                                                    class="img">
+                    </a>
+                    <div class="description text wrapper">
+                        <h2>咖啡星象与宇宙魔力杯</h2>
+                        <p>小兔子带着期盼踏上宇宙，和你一起徜徉感受宇宙星空的星象幻化，一起碰撞咖啡宇宙的无限可能性，解锁咖啡星象的浪漫故事，带来更多的中秋惊喜。</p>
+                    </div>
+                </div>
+                <div class="show-mobile tablet-hidden">
+                    <a href="https://www.starbucks.com.cn/menu/#lto-items"
+                       class="block relative"> <img
+                            src="./index_files/banner-5-mobile.jpg" class="img">
+                    </a>
+                    <div class="description text wrapper collapsed">
+                        <h2>咖啡星象与宇宙魔力杯</h2>
+                        <div class="body">
+                            <p>小兔子带着期盼踏上宇宙，和你一起徜徉感受宇宙星空的星象幻化，一起碰撞咖啡宇宙的无限可能性，解锁咖啡星象的浪漫故事，带来更多的中秋惊喜。</p>
+                        </div>
+                        <span class="icon"></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="mobile-hidden">
+                    <a href="https://www.starbucks.com.cn/menu/#lto-items"
+                       class="block relative"> <img src="./index_files/banner-6.jpg"
+                                                    class="img">
+                    </a>
+                    <div class="description text wrapper">
+                        <h2>告别夏季，品味秋日的醇香</h2>
+                        <p>融合了来自于苏门答腊咖啡豆柔和的草本风味，与危地马拉安提瓜独特香料风味的秋日综合咖啡豆，让相聚在一起庆祝佳节的亲朋好友都一同沉醉在它美妙的风味中。</p>
+                    </div>
+                </div>
+                <div class="show-mobile tablet-hidden">
+                    <a href="https://www.starbucks.com.cn/menu/#lto-items"
+                       class="block relative"> <img
+                            src="./index_files/banner-6-mobile.jpg" class="img">
+                    </a>
+                    <div class="description text wrapper collapsed">
+                        <h2>告别夏季，品味秋日的醇香</h2>
+                        <div class="body">
+                            <p>融合了来自于苏门答腊咖啡豆柔和的草本风味，与危地马拉安提瓜独特香料风味的秋日综合咖啡豆，让相聚在一起庆祝佳节的亲朋好友都一同沉醉在它美妙的风味中。</p>
+                        </div>
+                        <span class="icon"></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="mobile-hidden">
+                    <a
+                            href="https://www.starbucks.com.cn/stores/?features=reserve&amp;bounds=121.432893%2C31.203475%2C121.468599%2C31.228102"
+                            class="block relative"> <img src="./index_files/banner-7.jpg"
+                                                         class="img">
+                    </a>
+                    <div class="description text wrapper">
+                        <h2>别样灵感，探索秋之臻选</h2>
+                        <p>
+                            从非洲产区埃塞俄比亚启程，品尝富有薰衣草香气的比塔庄园咖啡豆；穿越大西洋来到拉丁美洲产区的哥伦比亚，在圣洛克蒙克斯咖啡豆中聆听修道院旁的咖啡故事；最后回到亚洲太平洋产区，在苏门答腊瓦哈纳庄园中捕捉浓郁的花香和草本香气。</p>
+                    </div>
+                </div>
+                <div class="show-mobile tablet-hidden">
+                    <a
+                            href="https://www.starbucks.com.cn/stores/?features=reserve&amp;bounds=121.432893%2C31.203475%2C121.468599%2C31.228102"
+                            class="block relative"> <img
+                            src="./index_files/banner-7-mobile.jpg" class="img">
+                    </a>
+                    <div class="description text wrapper collapsed">
+                        <h2>别样灵感，探索秋之臻选</h2>
+                        <div class="body">
+                            <p>
+                                从非洲产区埃塞俄比亚启程，品尝富有薰衣草香气的比塔庄园咖啡豆；穿越大西洋来到拉丁美洲产区的哥伦比亚，在圣洛克蒙克斯咖啡豆中聆听修道院旁的咖啡故事；最后回到亚洲太平洋产区，在苏门答腊瓦哈纳庄园中捕捉浓郁的花香和草本香气。</p>
+                        </div>
+                        <span class="icon"></span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="lto-items wrapper" id="lto-items">
+            <h2>所有新品</h2>
+            <div class="grid columns-3 padded-2">
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/pumpkin-spice-latte.png">
+                    <p>南瓜丝绒拿铁</p>
+                </div>
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/maple-creamaccino.png">
+                    <p>枫糖可芮奇诺</p>
+                </div>
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/lucky-paw-raspberry-cake.png">
+                    <p>杏运萌爪树莓蛋糕</p>
+                </div>
+
+
+                <div class="item" style="height: 305px;">
+                    <img src="./index_files/caramel-hazelnuts-bear-cake.png">
+                    <p>熊仔焦糖榛子蛋糕</p>
+                </div>
+
+
+                <div class="item" style="height: 305px;">
+                    <img src="./index_files/autumn-blend.png">
+                    <p>秋日综合咖啡豆</p>
+                </div>
+
+
+                <div class="item" style="height: 305px;">
+                    <img src="./index_files/colombia-monks-of-san-roque.png">
+                    <p>哥伦比亚圣洛克蒙克斯咖啡豆</p>
+                </div>
+
+
+                <div class="item" style="height: 357px;">
+                    <img src="./index_files/ethiopia-bitta-farm.png">
+                    <p>埃塞俄比亚比塔庄园咖啡豆</p>
+                </div>
+
+
+                <div class="item" style="height: 357px;">
+                    <img src="./index_files/sumatra-wahana-estate.png">
+                    <p>苏门答腊瓦哈纳庄园咖啡豆</p>
+                </div>
+
+
+                <div class="item" style="height: 357px;">
+                    <img src="./index_files/siren-forward-sr-kits-set.png">
+                    <p>人鱼系列特别套装：流连辗转会员星礼包,随卡附赠四季人鱼磁贴一套（共4枚）</p>
+                </div>
+
+
+                <div class="item" style="height: 357px;">
+                    <img
+                            src="./index_files/jimmy-crossover-sr-kits-collection-street.png">
+                    <p>几米联名《月亮忘记了》会员星礼包系列-街头款，随卡附赠立体拼图模型一套</p>
+                </div>
+
+
+                <div class="item" style="height: 357px;">
+                    <img src="./index_files/jimmy-crossover-sr-kits-collection-ye.png">
+                    <p>几米联名《月亮忘记了》会员星礼包系列-夜色款，随卡附赠立体拼图模型一套</p>
+                </div>
+
+
+                <div class="item" style="height: 357px;">
+                    <img src="./index_files/mer-1.png">
+                    <p>12oz玉兔仰望星空款马克杯</p>
+                </div>
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/mer-2.png">
+                    <p>14oz星空款保温杯</p>
+                </div>
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/mer-3.png">
+                    <p>20oz星空款不锈钢吸管杯</p>
+                </div>
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/mer-4.png">
+                    <p>12oz星空款杯碟组合</p>
+                </div>
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/mer-5.png">
+                    <p>粉彩小兔款水桶包套装</p>
+                </div>
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/mer-6.png">
+                    <p>12oz长耳萌兔款马克杯</p>
+                </div>
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/mer-7.png">
+                    <p>萌兔造型入油杯垫</p>
+                </div>
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/mer-8.png">
+                    <p>8oz萌兔款塑料随行杯</p>
+                </div>
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/mer-9.png">
+                    <p>16oz兔纹塑料吸管杯</p>
+                </div>
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/mer-10.png">
+                    <p>12oz兔纹不锈钢拎绳保温杯</p>
+                </div>
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/mer-11.png">
+                    <p>12oz绒毛萌兔款双层陶瓷杯</p>
+                </div>
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/mer-12.png">
+                    <p>8oz月球萌兔款马克杯组</p>
+                </div>
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/mer-13.png">
+                    <p>9oz萌兔双层玻璃杯</p>
+                </div>
+
+
+                <div class="item" style="height: 331px;">
+                    <img src="./index_files/mer-14.png">
+                    <p>260ml膳魔师银色星河款便当盒</p>
+                </div>
+
+
+                <div class="item" style="height: 331px;">
+                    <img src="./index_files/mer-15.png">
+                    <p>350ml膳魔师萌兔款保温杯</p>
+                </div>
+
+
+                <div class="item" style="height: 331px;">
+                    <img src="./index_files/mer-16.png">
+                    <p>310ml幻彩印章款马克杯</p>
+                </div>
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/mer-17.png">
+                    <p>8oz萌兔款带杯刷双层玻璃杯</p>
+                </div>
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/mer-18.png">
+                    <p>8oz中秋小夜灯款玻璃杯组</p>
+                </div>
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/mer-19.png">
+                    <p>15oz绚烂中秋萌兔款冷水瓶</p>
+                </div>
+
+
+                <div class="item" style="height: 305px;">
+                    <img src="./index_files/mer-20.png">
+                    <p>13oz梦幻渐变款不锈钢随行杯</p>
+                </div>
+
+
+                <div class="item" style="height: 305px;">
+                    <img src="./index_files/mer-21.png">
+                    <p>12oz绚烂星空款保温瓶</p>
+                </div>
+
+
+                <div class="item" style="height: 305px;">
+                    <img src="./index_files/mer-22.png">
+                    <p>12oz兔绒毛杯垫组</p>
+                </div>
+
+
+                <div class="item" style="height: 331px;">
+                    <img src="./index_files/mer-23.png">
+                    <p>13oz快乐转圈萌兔款不锈钢双层杯</p>
+                </div>
+
+
+                <div class="item" style="height: 331px;">
+                    <img src="./index_files/mer-24.png">
+                    <p>370ml膳魔师月球奇妙相遇款保温杯礼盒</p>
+                </div>
+
+
+                <div class="item" style="height: 331px;">
+                    <img src="./index_files/mer-25.png">
+                    <p>225ml热气球款双层玻璃杯</p>
+                </div>
+
+
+                <div class="item" style="height: 330px;">
+                    <img src="./index_files/mer-26.png">
+                    <p>月球造型杯壶组</p>
+                </div>
+
+
+                <div class="item" style="height: 330px;">
+                    <img src="./index_files/mer-27.png">
+                    <p>300ml月球探险款变色马克杯</p>
+                </div>
+
+
+                <div class="item" style="height: 330px;">
+                    <img src="./index_files/mer-28.png">
+                    <p>370ml月球探险款带搅拌勺马克杯组</p>
+                </div>
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/mer-29.png">
+                    <p>12oz咖啡月兔款不锈钢保温杯</p>
+                </div>
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/mer-30.png">
+                    <p>10oz月球探险款马克杯套装</p>
+                </div>
+
+
+                <div class="item" style="height: 306px;">
+                    <img src="./index_files/mer-31.png">
+                    <p>13oz月球探险热气球款玻璃杯</p>
+                </div>
+
+
+                <div class="item" style="height: 305px;">
+                    <img src="./index_files/mer-32.png">
+                    <p>月球探险款八音盒</p>
+                </div>
+
+
+            </div>
+        </section>
+
+        <script type="text/javascript">
+            var collapsibles = document
+                .querySelectorAll('.featured-collapsible');
+            for (var i = 0; i < collapsibles.length; i++) {
+                var collapsible = collapsibles[i];
+                collapsible.addEventListener('click', function (event) {
+                    if (!this.classList.contains('featured-collapsible')) {
+                        return;
+                    }
+                    this.classList.toggle('collapsed');
+                    this.classList.toggle('expanded');
+                });
+            }
+
+            function countLines(index) {
+                var dom = collapsibles[index].querySelector('.body p');
+                var divHeight = dom.offsetHeight;
+                var lineHeight = 25;
+                var lineCount = Math.round(divHeight / lineHeight);
+                return lineCount;
+            }
+
+            // If a text has only two lines, remove the toggle icon
+            function toggleCollapsible() {
+                for (var i = 0; i < collapsibles.length; i++) {
+                    var collapsible = collapsibles[i];
+                    var classList = collapsible.classList;
+                    var lineCount = countLines(i);
+                    if (lineCount > 2) {
+                        if (!classList.contains('featured-collapsible')) {
+                            classList.add('featured-collapsible');
+                        }
+                    } else {
+                        classList.remove('featured-collapsible');
+                    }
+                }
+            }
+
+            toggleCollapsible();
+            window.addEventListener('resize', toggleCollapsible);
+
+            function resizeLtoItems() {
+                // So that the old style won't effect the re-calc, which is needed when
+                // 1. New content such as images are loaded
+                // 2. Window resize
+                cleanLtoItemsStyle();
+                var ltoItems = document
+                    .querySelectorAll('.lto-items .item');
+                // There are some lot items invisable due to the mobile/desktop styling
+                var visibleLtoItems = [];
+                for (var i = 0; i < ltoItems.length; i++) {
+                    if (ltoItems[i].offsetHeight) {
+                        visibleLtoItems.push(ltoItems[i]);
+                    }
+                }
+                if (visibleLtoItems.length === 0)
+                    return;
+                var itemsPerRow = 1;
+                while (visibleLtoItems[itemsPerRow]
+                && visibleLtoItems[itemsPerRow - 1]
+                && visibleLtoItems[itemsPerRow].offsetTop == visibleLtoItems[itemsPerRow - 1].offsetTop) {
+                    itemsPerRow++;
+                }
+                var rows = [];
+                // This while transform visibleLtoItems to rows
+                while (visibleLtoItems.length) {
+                    var counter = itemsPerRow;
+                    var tempArr = [];
+                    while (counter--) {
+                        if (visibleLtoItems[0]) {
+                            tempArr.push(visibleLtoItems.shift());
+                        }
+                    }
+                    rows.push(tempArr);
+                }
+                // This for walk through every row and assign the height
+                for (var i = 0; i < rows.length; i++) {
+                    // ClientHeight is element height which doesn't count margin
+                    var heightMax = rows[i][0].clientHeight;
+                    for (var j = 1; j < rows[i].length; j++) {
+                        if (rows[i][j].clientHeight > heightMax)
+                            heightMax = rows[i][j].clientHeight;
+                    }
+                    for (var j = 0; j < rows[i].length; j++) {
+                        rows[i][j].style.height = heightMax + 'px';
+                    }
+                }
+                requestAnimationFrame(resizeLtoItems);
+            }
+
+            requestAnimationFrame(resizeLtoItems);
+
+            function cleanLtoItemsStyle() {
+                var ltoItems = document
+                    .querySelectorAll('.lto-items .item');
+                for (var i = 0; i < ltoItems.length; i++) {
+                    ltoItems[i].style.height = 'auto';
+                }
+            }
+        </script>
+
+        <div class="overlay" id="menu-search-overlay">
+            <header class="header">
+                <button class="icon close">Close</button>
+            </header>
+            <div class="body">
+                <div class="field search">
+                    <img src="./index_files/icon-search.svg" class="icon"> <input
+                        type="text" id="menu-search-input" placeholder="搜索菜单">
+                </div>
+                <div id="menu-search-empty">
+                    <div class="tag">大家都在搜</div>
+                </div>
+                <ul class="grid columns-4 padded-2" id="menu-search-results">
+                    <li><a class="overlay-close thumbnail"
+                           href="https://www.starbucks.com.cn/menu/beverages/espresso/caramel-macchiato/">
+                        <div class="preview circle"
+                             style="background-image: url(/images/products/caramel-macchiato.jpg)"></div>
+                        <strong>焦糖玛奇朵（热/冷）</strong>
+                    </a></li>
+                    <li><a class="overlay-close thumbnail"
+                           href="https://www.starbucks.com.cn/menu/coffee/whole-bean/medium-roast/starbucks-breakfast-blend/">
+                        <div class="preview circle"
+                             style="background-image: url(/images/breakfast-blend-coffee-beans.png)"></div>
+                        <strong>星巴克®早餐综合咖啡豆</strong>
+                    </a></li>
+                    <li><a class="overlay-close thumbnail"
+                           href="https://www.starbucks.com.cn/menu/coffee/whole-bean/medium-roast/starbucks-house-blend/">
+                        <div class="preview circle"
+                             style="background-image: url(/images/house-blend-coffee-beans.png)"></div>
+                        <strong>星巴克®首选咖啡豆</strong>
+                    </a></li>
+                    <li><a class="overlay-close thumbnail"
+                           href="https://www.starbucks.com.cn/menu/coffee/whole-bean/medium-roast/starbucks-kenya/">
+                        <div class="preview circle"
+                             style="background-image: url(/images/kenya-coffee-beans.png)"></div>
+                        <strong>星巴克®肯亚咖啡豆</strong>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="frap">
+            <button id="featured-campaign-search" class="button primary trigger"
+                    rel="menu-search-overlay">搜索菜单
+            </button>
+        </div>
+
+
+        <div id="app-notification">
+            <div data-reactroot=""></div>
+        </div>
+    </section>
+
+    <div id="app-loading">
+        <div data-reactroot="" class="loading"></div>
+    </div>
+    <div id="app-auth">
+        <span data-reactroot=""></span>
+    </div>
+
+
+</div>
+<!-- Navigation bottom mobile -->
+<div class="primary-mobile">
+    <ul class="flex justify-around logging-in-element">
+
+        <li class="home" id="home-mobile"><a
+                href="https://www.starbucks.com.cn/"> <span class="icons">
+						<img src="./index_files/icon-home.svg"> <img
+                src="./index_files/icon-home-active.svg" class="active">
+				</span>
+            <div id="home-mobile">主页</div>
+        </a></li>
+
+        <li class="stores" id="stores-mobile"><a
+                href="https://www.starbucks.com.cn/stores/"> <span class="icons">
+						<img src="./index_files/icon-stores.svg"> <img
+                src="./index_files/icon-stores-active.svg" class="active">
+				</span>
+            <div id="stores-mobile">门店</div>
+        </a></li>
+
+        <li class="account" id="account-mobile"><a
+                href="https://www.starbucks.com.cn/account/"> <span
+                class="icons"> <img src="./index_files/icon-account.svg">
+						<img src="./index_files/icon-account-active.svg" class="active">
+				</span>
+            <div id="account-mobile">
+                <span data-reactroot="" class="">我的帐户</span>
+            </div>
+        </a></li>
+
+        <li class="menu" id="menu-mobile"><a
+                href="https://www.starbucks.com.cn/menu/" class="active"> <span
+                class="icons"> <img src="./index_files/icon-menu.svg">
+						<img src="./index_files/icon-menu-active.svg" class="active">
+				</span>
+            <div id="menu-mobile">菜单</div>
+        </a></li>
+
+        <li class="more" id="more-mobile"><a class="icon trigger"
+                                             rel="nav-overlay"> <span class="icons"> <img
+                src="./index_files/icon-more.svg"> <img
+                src="./index_files/icon-more-active.svg" class="active">
+				</span>
+            <div>更多</div>
+        </a></li>
+    </ul>
+</div>
+
+
+<!-- Javascript -->
+<!--[if lt IE 9]>
+<script src='https://html5shim.googlecode.com/svn/trunk/html5.js'></script><![endif]-->
+<script>
+    var PAGE_LANG = 'zh';
+    var PAGE_TITLE = '季度精选 - 饮品、食物、咖啡豆、杯子、星享卡和礼物';
+    var PAGE_URL = '/menu/';
+    var SEARCH_EMPTY = '未找到结果，猜你喜欢';
+    var SEARCH_POPULAR = '大家都在搜';
+    var SURVEY_URL = '';
+</script>
+<script type="text/javascript" src="./index_files/jquery.min.js.下载"></script>
+<script type="text/javascript" src="./index_files/polyfill.min.js.下载"></script>
+<script type="text/javascript" src="./index_files/fastclick.js.下载"></script>
+<script type="text/javascript" src="./index_files/scripts.js.下载"></script>
+<script type="text/javascript" src="./index_files/tracker.js.下载"></script>
+<script type="text/javascript" src="./index_files/common.bundle.js.下载"></script>
+<script type="text/javascript" src="./index_files/vendor.bundle.js.下载"></script>
+<script type="text/javascript" src="./index_files/pages.bundle.js.下载"></script>
+
+
+<script type="text/javascript" src="./index_files/lunr.min.js.下载"></script>
+<script type="text/javascript" src="./index_files/menu-search-zh.js.下载"></script>
+
+
+<script type="text/javascript" src="./index_files/jweixin-1.2.0.js.下载"></script>
+<script type="text/javascript"
+        src="./index_files/wechat.v201803141700.js.下载"></script>
+
+<!-- <script src="https://browser.sentry-cdn.com/4.6.4/bundle.min.js" crossorigin="anonymous"></script> -->
+
+
+<script>
+    trackSearch('#menu-search-input');
+</script>
+
+
+</body>
+</html>
