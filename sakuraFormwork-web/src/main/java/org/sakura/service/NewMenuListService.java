@@ -10,4 +10,7 @@ public interface NewMenuListService {
     List<NewMenuList> findAllMenuList();
 
     void saveNewMenuList(NewMenuList newMenuList);
+
+
+    List<NewMenuList> findAllMenuListDetails(String menuId);
 }

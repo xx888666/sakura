@@ -1,6 +1,6 @@
 #server
 server:
-  port: 8095
+  port: 8098
   servlet:
     context-path: /
   tomcat:
@@ -28,7 +28,7 @@ mybatis:
     default-statement-timeout: 30
     map-underscore-to-camel-case: true
   mapper-locations:
-  - classpath:/mapper/sys/*.xml
+  - classpath:/mybatis/mappers/*.xml
 
   #mybatis-plush配置
   mybatis-plus:
@@ -43,7 +43,7 @@ mybatis:
 #lOG
 logging:
   level:
-    com.cy: DEBUG
+    org.sakura: DEBUG
     
       
 

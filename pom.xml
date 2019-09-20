@@ -75,6 +75,8 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional> <!-- 这个需要为 true 热部署才有效 -->
+			<scope>runtime</scope>
 		</dependency>
 
 		<!--引入插件lombok 自动的set/get/构造方法插件 -->

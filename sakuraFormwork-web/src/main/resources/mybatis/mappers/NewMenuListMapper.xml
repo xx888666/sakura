@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.sakura.mapper.NewMenuListMapper2">
+
+	<select id="findAllMenuListDetails" resultType="org.sakura.pojo.NewMenuList">
+		select * from tb_newmenu_list where menu_id = #{menuId}
+
+	</select>
+	
+</mapper>
