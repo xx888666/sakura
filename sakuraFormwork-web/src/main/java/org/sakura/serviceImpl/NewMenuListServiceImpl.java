@@ -1,10 +1,8 @@
 package org.sakura.serviceImpl;
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.sakura.exception.ServiceException;
 import org.sakura.mapper.NewMenuListMapper;
-import org.sakura.mapper.NewMenuListMapper2;
 import org.sakura.pojo.NewMenuList;
 import org.sakura.service.NewMenuListService;
 import org.springframework.beans.factory.annotation.Autowired;

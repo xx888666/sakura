@@ -121,6 +121,7 @@
                     data: {"menuId": menuId},//参数值menuId
                     type: "post",//请求的方式
 
+
                     success: function (data) {
                         //如果成功就显示数据库中的图片, 和文字, 并用标签包起来
                         console.log(data);
@@ -177,7 +178,14 @@
                     //data: {"id": "value"},//参数值
                     type: "post",//请求的方式
 
+                    beforeSend:function(XMLHttpRequest){
+                        alert('远程调用开始...');
+                        $("#testAjaxLoading").html("<img src='/testAjax/timg.gif'/>");
+
+                    },
+
                     success: function (data) {
+
                         console.log(data);
 
                         for (i = 0; i < data.data.length; i++) {
@@ -192,8 +200,12 @@
                             // })
                         }
 
+                    },//请求成功的处理
 
-                    }//请求成功的处理
+                    complete:function(XMLHttpRequest){
+                         alert('远程调用成功，状态文本值：');
+                        //$("#testAjaxLoading").empty();
+                    }
 
                 });
 
@@ -201,6 +213,17 @@
 
 
         });
+
+        /*js睡眠函数*/
+        function sleep(numberMillis) {
+            var now = new Date();
+            var exitTime = now.getTime() + numberMillis;
+            while (true) {
+                now = new Date();
+                if (now.getTime() > exitTime)
+                    return;
+            }
+        }
 
         function toUrl(obj) {
 
@@ -362,6 +385,10 @@
 
                     <div class="display-2">
                         <button onclick="newMenu()">添加菜单</button>
+                    </div>
+
+                    <!--测试ajax实现加载框-->
+                    <div id="testAjaxLoading">
                     </div>
 
 
